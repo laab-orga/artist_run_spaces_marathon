@@ -1,7 +1,8 @@
 $.getJSON('data/miserables.json',function(data){
-    console.log(data['nodes']);
-    console.log(data['links']);
+    var nodes = new vis.DataSet(['nodes']);
+    var edges = new vis.DataSet(data['links']);
 });
+/*
   // create an array with nodes
   var nodes = new vis.DataSet([
     {id: 1, city: 'Node 1',label:'Montpellier'},
@@ -19,7 +20,7 @@ $.getJSON('data/miserables.json',function(data){
     {from: 2, to: 5, width: 3 , label:'25'},
     {from: 2, to: 3, width: 1 , label:'23'},
   ]);
-
+*/
   // create a network
   var container = document.getElementById('mynetwork');
   var data = {
