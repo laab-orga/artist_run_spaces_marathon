@@ -1,4 +1,4 @@
-$.getJSON('../data/miserables.json',function(data){
+$.getJSON('data/miserables.json',function(data){
     console.log(data['nodes']);
     console.log(data['links']);
 });
