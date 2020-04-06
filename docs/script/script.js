@@ -1,5 +1,5 @@
 $.getJSON('data/miserables.json',function(data){
-    var nodes = new vis.DataSet(['nodes']);
+    var nodes = new vis.DataSet(data['nodes']);
     var edges = new vis.DataSet(data['links']);
 });
 /*
