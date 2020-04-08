@@ -69,7 +69,7 @@ function draw_graph(fichier){
       .append("circle")
       .attr("stroke-width", "2px")
       .attr("stroke","black")
-      .attr("fill", function(d) { return color(3+ d.degree); }) 
+      .attr("fill", function(d) { return color(d.degree); }) 
       .attr("r", function(d) { return 5+ 10*d.clustering_coeff; } )
       
   node.on("mouseover", focus).on("mouseout", unfocus);
@@ -88,8 +88,8 @@ function draw_graph(fichier){
       .append("text")
       .text(function(d, i) { return i % 2 == 0 ? "" : d.node.id; })
       .style("fill", "#555")
-      .style("font-family", "Arial")
-      .style("font-size", 12)
+      .style("font-family", "Didot,serif")
+      .style("font-size", 14)
       .style("pointer-events", "none"); // to prevent mouseover/drag capture
 
   node.on("mouseover", focus).on("mouseout", unfocus);
