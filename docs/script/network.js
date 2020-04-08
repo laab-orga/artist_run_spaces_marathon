@@ -2,17 +2,6 @@ var width = 800;
 var height = 600;
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-$(document).ready(function(){
-  
-  $('#clust').change(function(){
-    console.log($("#clust option:selected").val());
-    var fichier = $("#clust option:selected").val();
-    draw_graph(fichier);
-  });
-});
-
-
-
 function draw_graph(fichier){
   $('#viz').html('');
   console.log("data/kmeans/Kmeans"+fichier+".json");
