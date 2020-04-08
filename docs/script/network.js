@@ -69,7 +69,7 @@ function draw_graph(fichier){
       .append("circle")
       .attr("r", 5)
       .attr("fill", function(d) { return color( d.degree); }) 
-      .attr("r", function(d) { return 3+40*d.clustering_coeff; } ) 
+      .attr("r", function(d) { return 3+15*d.clustering_coeff; } ) 
       
   node.on("mouseover", focus).on("mouseout", unfocus);
 
