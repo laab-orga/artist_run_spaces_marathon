@@ -1,6 +1,6 @@
 var width = 800;
 var height = 600;
-var color = d3.scaleOrdinal(d3.schemeGreys);
+var color = d3.scaleSequential(d3.schemeGreys);
 
 function draw_graph(fichier){
   $('#viz').html('');
