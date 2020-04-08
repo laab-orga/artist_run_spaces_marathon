@@ -1,6 +1,6 @@
 var width = 800;
 var height = 600;
-var color = d3.scaleOrdinal(d3.schemeCategory10);
+var color = d3.scaleOrdinal(d3.schemeGreys[9]);
 
 function draw_graph(fichier){
   $('#viz').html('');
@@ -59,17 +59,18 @@ function draw_graph(fichier){
       .data(graph.links)
       .enter()
       .append("line")
-      .attr("stroke", "#aaa")  
-      .attr("stroke-width", "1px");;
+      .attr("stroke", "#aaa")   
+      .attr("stroke-width", function(d) { return Math.round(20*d.value); }); 
 
   var node = container.append("g").attr("class", "nodes")
       .selectAll("g")
       .data(graph.nodes)
       .enter()
       .append("circle")
-      .attr("r", 5)
-      .attr("fill", function(d) { return color( d.degree); }) 
-      .attr("r", function(d) { return 3+15*d.clustering_coeff; } ) 
+      .attr("stroke-width", "2px")
+      .attr("stroke","black")
+      .attr("fill", function(d) { return color(3+ d.degree); }) 
+      .attr("r", function(d) { return 5+ 10*d.clustering_coeff; } )
       
   node.on("mouseover", focus).on("mouseout", unfocus);
 
