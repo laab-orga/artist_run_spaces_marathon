@@ -22,7 +22,7 @@ function wordcloud(fichier){
 	    },
 	    series: [{
 		type: 'wordcloud',
-		data: data["cluster1"],
+		data: data["cluster"+fichier],
 		name: 'Occurrences'
 	    }],
 	    title: {
