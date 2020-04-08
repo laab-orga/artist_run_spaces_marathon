@@ -1,5 +1,5 @@
 function wordcloud(fichier){
-	var requestURL = 'data/comptage/graphe'+fichier+'.json';
+	var requestURL = 'data/comptage/graphe1.json';
 		var request = new XMLHttpRequest();
 		request.open('GET', requestURL);
 		request.responseType = 'json';	
