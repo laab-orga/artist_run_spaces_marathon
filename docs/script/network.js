@@ -59,8 +59,8 @@ function draw_graph(fichier){
       .data(graph.links)
       .enter()
       .append("line")
-      .attr("stroke", "#aaa")
-      .attr("stroke-width", "1px");
+      .attr("stroke", "#aaa")  
+      .attr("stroke-width", "1px");;
 
   var node = container.append("g").attr("class", "nodes")
       .selectAll("g")
@@ -68,8 +68,9 @@ function draw_graph(fichier){
       .enter()
       .append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
-
+      .attr("fill", function(d) { return color( d.degree); }) 
+      .attr("r", function(d) { return 3+40*d.clustering_coeff; } ) 
+      
   node.on("mouseover", focus).on("mouseout", unfocus);
 
   node.call(
