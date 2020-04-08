@@ -1,6 +1,6 @@
 var width = 800;
 var height = 600;
-var color = d3.scaleOrdinal(d3.schemeCategory20c);
+var color = var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 function draw_graph(fichier){
   $('#viz').html('');
@@ -59,7 +59,8 @@ function draw_graph(fichier){
       .data(graph.links)
       .enter()
       .append("line")
-      .attr("stroke", "#aaa") ;
+      .attr("stroke", "#aaa")  
+      .attr("stroke-width", "1px");;
 
   var node = container.append("g").attr("class", "nodes")
       .selectAll("g")
