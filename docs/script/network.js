@@ -1,6 +1,6 @@
 var width = 800;
 var height = 600;
-var color = d3.scaleOrdinal(d3.schemeCategory10);
+var color = d3.scaleOrdinal(d3.schemeGreys);
 
 function draw_graph(fichier){
   $('#viz').html('');
@@ -60,7 +60,6 @@ function draw_graph(fichier){
       .enter()
       .append("line")
       .attr("stroke", "#aaa")
-      .attr("stroke-width", "1px");
 
   var node = container.append("g").attr("class", "nodes")
       .selectAll("g")
@@ -68,8 +67,9 @@ function draw_graph(fichier){
       .enter()
       .append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
-
+      .attr("fill", function(d) { return color( d.clustering_coeff); }) 
+      .attr("r", function(d) { return 3+2*d.degree; } ) ;
+      
   node.on("mouseover", focus).on("mouseout", unfocus);
 
   node.call(
