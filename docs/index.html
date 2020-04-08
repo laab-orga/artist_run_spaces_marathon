@@ -57,7 +57,7 @@
         <!--<span class="doc_title">Graphes</span>-->
 		<div class="titreCluster">
 		CHOIX DU CLUSTER
-		<img src="data/info.svg" class="infosvg" width="10px" alt="">
+		<!--<img src="data/info.svg" class="infosvg" width="10px" alt="">-->
 		</div>
 
         <div class="clusters">
@@ -76,11 +76,20 @@
             </select>
         
         </div>
-        
-        <!-- Paramètres -->
-<div id="param">ici c'est les paramètres </div>
-
-<!--fin paramètres-->
+		
+		<div class="descriptionTitre">
+		DESCRIPTION
+		</div>
+		
+		<div class="descriptionText">
+		Sur ce graphique nous pouvons distinguer les projets liés par mots clés.
+		</br></br>Un arc représente le nombre de mots clés qui relie deux projets sel leurs similitudes.
+		</br></br>Nous pouvons dégager des clusters de cette représentation et les selectionner un a uns.
+		</br></br>Le degrés d'un noeuds et représenté par sa couleur, plus la nuance est foncé plus le degré du noeuds est élevé. 
+		</br></br>La taille de chaque noeuds depend de son coefficient de cluster. 
+		</div>
+		
+		
 </div>
     <div class="divider"></div>
 	
@@ -90,7 +99,10 @@
 
 </div>
 
+<!-- Paramètres -->
+<div id="param">ici c'est les paramètres </div>
 
+<!--fin paramètres-->
 
 <div>
     <div id="content_lda"></div>
@@ -124,12 +136,8 @@
 <!--fin nuage de mot-->
 
 
-</body>
-</html>
-
 
 <!-- Matrice d'adjacence -->
-
 
 <figure class="highcharts-figure">
     <div id="container2"></div>
@@ -144,10 +152,6 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 <script src="script/matrice_adjacence.js"></script>
-
-
-
-
 
 <!--fin Matrice d'adjacence-->
 
