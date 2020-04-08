@@ -50,6 +50,12 @@ function draw_graph(fichier){
       adjlist[d.source.index + "-" + d.target.index] = true;
       adjlist[d.target.index + "-" + d.source.index] = true;
   });
+
+  function neigh(a, b) {
+      return a == b || adjlist[a + "-" + b];
+  }
+
+
   var svg = d3.select("#viz").attr("width", width).attr("height", height);
   var container = svg.append("g");
 
