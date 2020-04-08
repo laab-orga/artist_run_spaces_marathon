@@ -7,7 +7,7 @@ function Parametre(fichier){
 	request.onload = function() {
 		var data = request.response;
 	// définition des variables 
-		var cluster = 'cluster'+(fichier); 
+		var cluster = 'cluster'+fichier; 
 		var degréMoyen=data[cluster][0]["degree_moyen"];
 		var degréMax=data[cluster][0]['degree_max'];
 		var degréMaxName=data[cluster][0]['noeud_max_degree'];
@@ -20,7 +20,7 @@ function Parametre(fichier){
 
 		
 // Création du tableau 
-			var tableaudegre = "";
+			var tableau = "";
 			
 			titre = 'Paramètres du ' ;
 			titre+=cluster;
@@ -28,11 +28,11 @@ function Parametre(fichier){
 			//tableauHTML.hidden = false;
 			// TABLEAU DEGRÉ 
 
-			tableaudegre += "<titre> Tableau des paramètres du "+cluster+"</titre><table><tr><TH>Paramètre</TH><TH>Valeur</TH><TH>Name</TH></tr><tr><TH> Taille du Graphe </TH><td>"+TailleGraph+"</td><td></td></tr><tr><TH> Degré moyen </TH><td>"+degréMoyen+"</td><td></td></tr><tr><th>Degré max</th><td>"+degréMax+"</td><td>"+degréMaxName+"</td></tr><tr><th>Degré min</th><td>"+degréMin+"</td><td>"+degréMinName+"</td></tr><tr><th>Coefficient de Clustering Moyen</th><td>"+coefClusterMoyen+"</td><td></td></tr><tr><TH> Connectivité moyen </TH><td>"+connectivitéMoyenneGraph+"</td><td></td></tr></table>";
+			tableau += "<titre> Tableau des paramètres du "+cluster+"</titre><table><tr><TH>Paramètre</TH><TH>Valeur</TH><TH>Name</TH></tr><tr><TH> Taille du Graphe </TH><td>"+TailleGraph+"</td><td></td></tr><tr><TH> Degré moyen </TH><td>"+degréMoyen+"</td><td></td></tr><tr><th>Degré max</th><td>"+degréMax+"</td><td>"+degréMaxName+"</td></tr><tr><th>Degré min</th><td>"+degréMin+"</td><td>"+degréMinName+"</td></tr><tr><th>Coefficient de Clustering Moyen</th><td>"+coefClusterMoyen+"</td><td></td></tr><tr><TH> Connectivité moyen </TH><td>"+connectivitéMoyenneGraph+"</td><td></td></tr></table>";
 
 
 // Ajustement HTML
 		var ex = document.getElementById("param");
-		ex.innerHTML = tableaudegre;
+		ex.innerHTML = tableau;
 		}
 	}	
