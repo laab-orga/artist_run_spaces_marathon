@@ -187,11 +187,45 @@ svg{
 	margin-top:2%;
 }
 
+/*_____________________________________ parametre page index.html _______________________________*/
+#param{
+	/*border:1px solid red;*/
+	float:left;
+	width:50%;
+	height:700px;
+}
+#legendeGraphiqueSarah{
+	/*border:1px solid red; */
+	float:left;
+	width:50%;
+	height:650px;
+	padding:1%;
+	text-align:justify;
+	font-family: Didot,serif;
+	color:rgba(98, 98, 98, 1);
+	letter-spacing:1px;
+	border-left:2px solid rgb(220, 220, 220);
+	border-right:2px solid rgb(220, 220, 220);
+	background-color:white;
+}
+#tableSarah{
+	border: 1px solid black;
+	width: 100%;
+	padding:3%;
+	margin:auto;
+	text-align:center;
+	margin-top:15%;
+}
+#tableSarah td, th {
+	border: thin solid white;
+	width:auto;
+	padding:3%; 
+	text-align:center;
+}
 
-
-
-
-
+#etudeParamSarah{
+	height:750px;
+}
 
 
 
