@@ -17,6 +17,9 @@ function wordcloud(fichier,div){
 			'<div>{viewTableButton}</div>'
 		}
 	    },
+		colors: [
+        '#000000'
+		],
 	    series: [{
 		type: 'wordcloud',
 		data: data,
