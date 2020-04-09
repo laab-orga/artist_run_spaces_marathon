@@ -1,10 +1,10 @@
 console.log('Adjacence');
 function adjacence(fichier){
-	var requestURL = 'data/scrap_web_link/GRAPHE'+fichier+'.json';
+	var requestURL = 'data/scrap_web_link/HEATMAP_ADJENCYWORD/'+fichier+'.csv';
 	console.log(requestURL);
 		var request = new XMLHttpRequest();
 		request.open('GET', requestURL);
-		request.responseType = 'json';	
+		request.responseType = 'csv';	
 		request.send();
 		request.onload = function() {
 			var data = request.response;
