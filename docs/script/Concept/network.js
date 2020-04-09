@@ -1,9 +1,11 @@
 console.log('Network');
 var width = 800;
 var height = 600;
-var color = d3.scaleOrdinal(d3.schemeGreys[9]);
 
-function draw_graph(fichier,div){
+
+function draw_graph(fichier,div){ 
+  
+  
   $('#viz_'+div).html('');
   d3.json("data/concept/"+fichier+".json").then(function(graph) {
     console.log(graph);
@@ -11,7 +13,7 @@ function draw_graph(fichier,div){
       'nodes': [],
       'links': []
   };
-
+   var color = d3.scaleOrdinal(d3.schemeGreys[9]);
   graph.nodes.forEach(function(d, i) {
       label.nodes.push({node: d});
       label.nodes.push({node: d});
