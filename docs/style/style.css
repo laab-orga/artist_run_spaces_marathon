@@ -45,12 +45,14 @@ text {
   grid-template-columns: 2fr 1fr;
 }
 .left{
-  height:850px;
+  height:800px;
 }
 .right{
-  height:850px;
+  height:800px;
 }
-
+svg{
+  border:1px solid black;
+}
 .infosvg{
   width  : 18px;
   height : 18px;
