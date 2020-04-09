@@ -1,8 +1,9 @@
 var width = 800;
 var height = 600;
-var color = d3.scaleOrdinal(d3.schemeGreys[9]);
 
 function draw_graph(fichier){
+var color = d3.scaleOrdinal(d3.schemeGreys[9]);
+  console.log(color);
   $('#viz').html('');
   console.log("data/kmeans/Kmeans"+fichier+".json");
   d3.json("data/kmeans/Kmeans"+fichier+".json").then(function(graph) {
