@@ -53,10 +53,10 @@ text {
 .right{
   height:800px;
 }
-
-.infosvg{
-	
+svg{
   border:1px solid black;
+}
+.infosvg{
   width  : 18px;
   height : 18px;
   margin : 0;
