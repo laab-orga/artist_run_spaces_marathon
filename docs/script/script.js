@@ -13,11 +13,11 @@ $(document).ready(function(){
       adjacence(fichier);
       Parametre(fichier);
       global_graph(fichier);
-      if(fichier!='global'){
-        $('.container3').attr('display','none');
+      if(fichier!='Global'){
+        $('.container3').hide();
       }
       else{
-        $('.container3').attr('display','block');
+        $('.container3').show();
       }
       $('#content_lda').html(`<object class="w-100 lda" data="data/LDA/cluster`+fichier+`lda.html" type="text/html" > <!-- Mettre chemin vers fichier LDA-->`);
     });
