@@ -1,6 +1,6 @@
 console.log('wordcloud');
 function wordcloud(fichier,div){
-	var requestURL = 'data/scrap_web_link/CLOUD/'+fichier+'.json';
+	var requestURL = 'data/Concept/'+fichier+'.json';
 		var request = new XMLHttpRequest();
 		request.open('GET', requestURL);
 		request.responseType = 'json';	
