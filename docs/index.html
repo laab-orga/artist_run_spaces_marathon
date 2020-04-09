@@ -116,11 +116,13 @@
 
 
 <!-- nuage de mot -->
-
+<div class="etude">
+	
+	<p class="titreGraphique">NUAGE DE MOTS CLES</p>
+	
 	<figure class="highcharts-figure">
     <div id="container"></div>
-    <p class="highcharts-description">
-        Ici on peut trouver tous les mots clés qui relié les sites entre eux dans ce cluster. 
+    <p class="highcharts-description"> 
     </p>
 	</figure>
 
@@ -134,14 +136,23 @@
 	<script src="script/Parametres.js"></script>
 	
 	<script src="script/nuage_de_mots.js"></script>
+	
+	<div class="legendeGraphique">
+	Ce nuage de mot représente les mots clés les plus présent dans les liaisons entre les sites de ce cluster. 
+	Plus le mot clé est gros plus, plus cela signifie qu'il est fréquent. 
+	</div>
 
-
+</div>
 
 <!--fin nuage de mot-->
 
 
 
 <!-- Matrice d'adjacence -->
+
+<div class="etude">
+
+<p class="titreGraphique">MATRICE D'ADJACENCE</p>
 
 <figure class="highcharts-figure">
     <div id="container2"></div>
@@ -157,6 +168,12 @@
 
 <script src="script/matrice_adjacence.js"></script>
 
+	<div class="legendeGraphique">
+	Correspond à la matrice d'adjacence du cluster selectionner. Ici on peut voir le poid de chaque arrêtes et avoir une vision 
+	globale sur le cluster des liaison entre les sommets. 
+	</div>
+
+</div>
 <!--fin Matrice d'adjacence-->
 
 
