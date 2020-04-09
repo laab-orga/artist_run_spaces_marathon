@@ -37,6 +37,13 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
 <title>Analyse Des Entités Nommées</title>
 </head>
 <body>
@@ -69,7 +76,8 @@
 		<li class="w-33 nav-item"><a href="#parametre1" class="nav-link">Parametre du premier Graphe</a></li> 
 		<li class="w-33 nav-item"><a href="#graphique2" class="nav-link">Graphe d'entitée</a></li> 
 		<li class="w-33 nav-item"><a href="#paremetre2" class="nav-link">Parametre du deuxième Graphe</a></li>
-		<li class="w-33 nav-item"><a href="#matrice_adjacence" class="nav-link">matrice d'adjacence</a></li>  
+		<li class="w-33 nav-item"><a href="#nuage_de_mots" class="nav-link">Nuage de mots</a></li>
+		<li class="w-33 nav-item"><a href="#matrice_adjacence" class="nav-link">matrice d'adjacence du deuxième graphe</a></li>  
 </ul> 
 </nav>
 	
@@ -219,16 +227,46 @@
 <!--fin nuage de mot-->
 
     <!-- Matrice d'adjacence -->
-	
 	<!--
+	
     <figure class="highcharts-figure">
-        <div id="container2"></div>
+        <div id="container2_entite"></div>
         <p class="highcharts-description">
         </p>
     </figure>
-	-->
-
+	
+-->
     <!--fin Matrice d'adjacence-->
+	
+	
+<!-- Matrice d'adjacence -->
+
+<div class="etude" id="matrice_adjacence">
+
+<p class="titreGraphique">MATRICE D'ADJACENCE DU SECOND GRAPHE</p>
+
+<figure class="highcharts-figure">
+    <div id="container2_entite"></div>
+    <p class="highcharts-description">
+    </p>
+</figure>
+
+	<div class="legendeGraphique">
+	Le tableau ci-dessus correspond à la matrice d'adjacence du cluster sélectionné. Ici on peut voir le poids de chaque arète et avoir une vision 
+	globale sur le cluster des liaisons entre les sommets. 
+	</div>
+
+</div>
+<!--fin Matrice d'adjacence-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 </body>
 </html>
