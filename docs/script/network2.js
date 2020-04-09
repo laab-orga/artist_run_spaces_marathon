@@ -60,7 +60,7 @@ function draw_graph(fichier,div){
       .enter()
       .append("line")
       .attr("stroke", "#aaa")   
-      .attr("stroke-width", function(d) { return Math.round(20*d.value); }); 
+      .attr("stroke-width", function(d) { return Math.round(7*d.value); }); 
 
   var node = container.append("g").attr("class", "nodes")
       .selectAll("g")
