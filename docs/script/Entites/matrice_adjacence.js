@@ -4,7 +4,7 @@ function adjacence(fichier){
 	console.log(requestURL);
 		var request = new XMLHttpRequest();
 		request.open('GET', requestURL);
-		request.responseType = 'csv';	
+		request.responseType = 'text';	
 		request.send();
 		request.onload = function() {
 			var data = request.response;
