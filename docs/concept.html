@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- BOOTSTRAP -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- --------- -->
+<link rel="stylesheet" href="style/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="data/favicon.ico" />
+<script src='https://d3js.org/d3.v5.min.js'></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js"></script>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+</script>
+
+<script src="script/Concept/nuage_de_mots.js"></script>
+<script src="script/Concept/script.js"></script>
+<script src="script/Concept/network.js"></script>
+<script src="script/Concept/Parametres.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+<title>Concepts</title>
+</head>
+<body>
+
+<nav class="w-100 navbar nav_bar navbar-expand-md navbar-light "> 
+    <ul class="w-100 col-xs-5 navbar-nav mx-auto"> 
+        <li class="w-20 nav-item"><a href="#" class="nav-link">Carte</a></li> 
+        <li class="w-20 nav-item"><a href="#" class="nav-link">Présentation</a></li> 
+        <li class="w-20 nav-item"><a href="#" class="nav-link">Ressources</a></li> 
+        <li class="w-20 nav-item"><a href="#" class="nav-link">Evenements</a></li> 
+        <li class="w-20 nav-item"><a href="#" class="nav-link">Contact</a></li> 
+    </ul> 
+    <span class="w-100 title">Artist Run Space Initiative</span>
+
+    <ul class="w-100 col-xs-5 navbar-nav mx-auto"> 
+        <li class="w-33 nav-item"><a href="index.html" class="nav-link">Mots</a></li> 
+        <li class="w-33 nav-item"><a href="nameEntites.html" class="nav-link">Entités</a></li> 
+        <li class="w-33 nav-item"><a href="concept.html" class="nav-link">global</a></li> 
+    </ul> 
+</nav>
+
+    <div class="titreGraphe">
+        ÉTUDE DES MOTS CLÉS ENTRE SITES
+    </div>
+
+    <div class="w-100 content">
+        <div class="left">
+            <div class="network_g">
+                <svg id='viz_1' width = '800px' height = '600px'></svg>
+            </div>
+        </div>
+
+        <div class="right">
+
+		
+            <div class="descriptionText">
+                Sur ce graphique nous pouvons distinguer les projets liés par mots clés.
+                </br></br>Un arc représente le nombre de mots clés qui relie deux projets sel leurs similitudes.
+                </br></br>Nous pouvons dégager des clusters de cette représentation et les selectionner un a uns.
+                </br></br>Le degrés d'un noeuds et représenté par sa couleur, plus la nuance est foncé plus le degré du noeuds est élevé. 
+                </br></br>La taille de chaque noeuds depend de son coefficient de cluster. 
+            </div>
+ 
+                
+        </div>
+
+        <div class="divider"></div>
+        
+        <div class="divider"></div>
+
+        <div class="left">
+            <div class="network_g">
+                <svg id='viz_2' width = '800px' height = '600px'></svg>
+            </div>
+        </div>
+
+
+
+        <div class="right">
+            <div class="descriptionText">
+                Sur ce graphique nous pouvons distinguer les projets liés par mots clés.
+                </br></br>Un arc représente le nombre de mots clés qui relie deux projets sel leurs similitudes.
+                </br></br>Nous pouvons dégager des clusters de cette représentation et les selectionner un a uns.
+                </br></br>Le degrés d'un noeuds et représenté par sa couleur, plus la nuance est foncé plus le degré du noeuds est élevé. 
+                </br></br>La taille de chaque noeuds depend de son coefficient de cluster. 
+            </div>            
+        </div>	
+
+        
+    </div>
+
+    <!-- Paramètres <div id="param">ici c'est les paramètres </div>-->
+    
+
+    <!--fin paramètres-->
+
+    <div>
+        <div id="content_lda"></div>
+    </div>
+
+    <!-- nuage de mot -->
+
+        <figure class="highcharts-figure">
+        <div id="container_1"></div>
+        <p class="highcharts-description">
+            Sources
+        </p>
+        </figure>
+        
+
+    <!--fin nuage de mot-->
+
+    <!-- Matrice d'adjacence -->
+
+    <figure class="highcharts-figure">
+        <div id="container2"></div>
+        <p class="highcharts-description">
+        </p>
+    </figure>
+
+    <!--fin Matrice d'adjacence-->
+
+
+</body>
+</html>
