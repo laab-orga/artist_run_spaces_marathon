@@ -1,10 +1,10 @@
 console.log('Adjacence');
 function adjacence(fichier){
-	var requestURL = 'data/scrap_web_link/HEATMAP_ADJENCYWORD/'+fichier+'.csv';
+	var requestURL = 'data/concept/graph_word_concept_final.json';
 	console.log(requestURL);
 		var request = new XMLHttpRequest();
 		request.open('GET', requestURL);
-		request.responseType = 'text';	
+		request.responseType = 'json';	
 		request.send();
 		request.onload = function() {
 			var data = request.response;
@@ -83,7 +83,7 @@ Highcharts.chart('container2', {
 
 
     title: {
-        text: 'Matrice d\'adjacence'
+        text: ''
     },
 
     xAxis: {
@@ -112,8 +112,8 @@ Highcharts.chart('container2', {
 
     colorAxis: {
         min: 0,
-        minColor: '#FFFFFF',
-        maxColor: Highcharts.getOptions().colors[0]
+        minColor: '#e9e9e9',
+        maxColor: Highcharts.getOptions().colors[1]
     },
 
     legend: {
@@ -161,8 +161,6 @@ Highcharts.chart('container2', {
     }
 
 });
-
-
 
 
 		}
