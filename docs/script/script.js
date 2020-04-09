@@ -2,6 +2,7 @@
 $(document).ready(function(){
   console.log('script');
   var fichier = $("#clust option:selected").val();
+  global_graph(fichier);
   draw_graph(fichier);
     $('#clust').change(function(){
       console.log($("#clust option:selected").val());
