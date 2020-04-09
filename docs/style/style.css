@@ -276,6 +276,16 @@ svg{
 	height:750px;
 }
 
-
+/*_______________________________________ page concepte.html _______________________________*/
+#param_concept_pro{
+	float:left;
+	width:50%;
+	height:700px;
+}
+#param_concept_words{
+	float:left;
+	width:50%;
+	height:700px;
+}
 
 
