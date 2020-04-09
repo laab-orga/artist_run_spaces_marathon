@@ -1,4 +1,3 @@
-console.log('script');
 $(document).ready(function(){
     draw_graph('graph_scrap',1);
     draw_graph('Word_scrap2',2);
