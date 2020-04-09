@@ -13,7 +13,8 @@ function draw_graph(fichier,div){
       'nodes': [],
       'links': []
   };
-   var color = d3.scaleOrdinal(d3.schemeGreys[9]);
+   var color = d3.scaleOrdinal(d3.schemeGreys[9]); 
+    console.log(color);
   graph.nodes.forEach(function(d, i) {
       label.nodes.push({node: d});
       label.nodes.push({node: d});
