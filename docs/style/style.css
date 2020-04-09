@@ -255,6 +255,12 @@ svg{
 #legendeGraphiqueTheo{
 	height:19%; 
 }
+/*_______________________________________ LEGENDE ________________________________________*/
+#legendofgraf{
+	/*border:1px solid red; */
+	margin-top:-20%;
+	margin-left:7%; 
+}
 
 
 
