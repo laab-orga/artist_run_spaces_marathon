@@ -8,7 +8,7 @@ function adjacence(fichier){
 		request.send();
 		request.onload = function() {
 			var data = request.response;
-			//console.log(data);
+			console.log(data);
 			//faire une liste des sommets du graphes.
 			var listeSommet=[];
 			var listeSommetId=[];
