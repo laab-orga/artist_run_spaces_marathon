@@ -150,6 +150,42 @@ svg{
 	text-align:center;
 	
 }
+/* _____________________________________ modif gaelle _____________________*/
+
+.etude{
+	/*border: 1px solid red; */
+	height:650px;
+	background-color:rgb(220, 220, 220);
+	margin-top:10%;
+	margin-bottom:10%;
+	
+}
+.w-33{
+  width: 33% !important;
+}
+.titreGraphique{
+	letter-spacing:5px;
+	font-family: Didot,serif;
+	color:rgba(98, 98, 98, 1);
+	margin-top:4%;
+	margin-bottom:3%;
+	font-size:18px;
+	text-align:center;
+	padding-top:3%;
+}
+.legendeGraphique{
+	width:70%;
+	margin:auto;
+	background-color:white;
+	/*border:1px solid red;*/
+	height:15%;
+	text-align:justify;
+	padding:2%;
+	font-family: Didot,serif;
+	color:rgba(98, 98, 98, 1);
+	letter-spacing:1px;
+	margin-top:2%;
+}
 
 
 
