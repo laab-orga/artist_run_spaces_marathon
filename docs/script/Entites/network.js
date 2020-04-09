@@ -1,9 +1,9 @@
 var width = 800;
 var height = 600;
 
+var color2 = d3.scaleOrdinal(d3.schemeGreys[9]);
 function draw_graph(fichier,div){
-var color = d3.scaleOrdinal(d3.schemeGreys[9]);
-  console.log(color);
+  console.log(color2);
   $('#viz_'+div).html('');
   d3.json("data/scrap_web_link/GRAPHE/"+fichier+".json").then(function(graph) {
     console.log(graph);
@@ -69,7 +69,7 @@ var color = d3.scaleOrdinal(d3.schemeGreys[9]);
       .append("circle")
       .attr("stroke-width", "2px")
       .attr("stroke","black")
-      .attr("fill", function(d) { return color(Math.min(7,d.degree)); }) 
+      .attr("fill", function(d) { return color2(Math.min(7,d.degree)); }) 
       .attr("r", function(d) { return 5+ 10*d.clustering_coeff; } )
       
   node.on("mouseover", focus).on("mouseout", unfocus);
