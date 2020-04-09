@@ -69,7 +69,7 @@ function draw_graph(fichier,div){
       .append("circle")
       .attr("stroke-width", "2px")
       .attr("stroke","black")
-      .attr("fill", function(d) { return color(d.degree); }) 
+      .attr("fill", function(d) { return color(Math.min(9,d.degree)); }) 
       .attr("r", function(d) { return 5+ 10*d.clustering_coeff; } )
       
   node.on("mouseover", focus).on("mouseout", unfocus);
