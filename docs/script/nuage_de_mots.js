@@ -20,13 +20,16 @@ function wordcloud(fichier){
 			'<div>{viewTableButton}</div>'
 		}
 	    },
+		colors: [
+        '#000000'
+		],
 	    series: [{
 		type: 'wordcloud',
 		data: data["cluster"+fichier],
 		name: 'Occurrences'
 	    }],
 	    title: {
-		text: 'Nuage des mots clés du cluster'
+		text: ''
 	    }
 	});
 
