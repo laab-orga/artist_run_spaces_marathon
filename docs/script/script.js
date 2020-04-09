@@ -1,10 +1,11 @@
 
 $(document).ready(function(){
-  console.log('script');
   var fichier = $("#clust option:selected").val();
   global_graph(fichier);
   draw_graph(fichier);
+      console.log(fichier);
     $('#clust').change(function(){
+      console.log(fichier);
       console.log($("#clust option:selected").val());
       fichier = $("#clust option:selected").val();
       draw_graph(fichier);
