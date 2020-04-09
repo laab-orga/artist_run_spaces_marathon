@@ -2,6 +2,7 @@ console.log('Network');
 var width = 800;
 var height = 600;
 
+   var color3 = d3.scaleOrdinal(d3.schemeGreys[9]); 
 
 function draw_graph(fichier,div){ 
   
@@ -13,8 +14,6 @@ function draw_graph(fichier,div){
       'nodes': [],
       'links': []
   };
-   var color = d3.scaleOrdinal(d3.schemeGreys[9]); 
-    console.log(color);
   graph.nodes.forEach(function(d, i) {
       label.nodes.push({node: d});
       label.nodes.push({node: d});
@@ -72,7 +71,7 @@ function draw_graph(fichier,div){
       .append("circle")
       .attr("stroke-width", "2px")
       .attr("stroke","black")
-      .attr("fill", function(d) { return color(Math.min(7,d.degree)); }) 
+      .attr("fill", function(d) { return color3(Math.min(7,d.degree)); }) 
       .attr("r", function(d) { return 5+ 10*d.clustering_coeff; } )
       
   node.on("mouseover", focus).on("mouseout", unfocus);
