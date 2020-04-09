@@ -5,6 +5,12 @@ $(document).ready(function(){
   global_graph(fichier);
   draw_graph(fichier);
     $('#clust').change(function(){
+      if(fichier!='global'){
+        $('.container3').attr('display','none');
+      }
+      else{
+        $('.container3').attr('display','block');
+      }
       console.log($("#clust option:selected").val());
       fichier = $("#clust option:selected").val();
       draw_graph(fichier);
