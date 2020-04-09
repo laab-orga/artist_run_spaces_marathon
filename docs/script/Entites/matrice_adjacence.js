@@ -1,14 +1,15 @@
 console.log('Adjacence');
 function adjacence(fichier){
-	var requestURL = 'data/scrap_web_link/HEATMAP_ADJENCYWORD/'+fichier+'.csv';
+	var requestURL = 'data/scrap_web_link/GRAPHE/Word_scrap2.json';
 	console.log(requestURL);
 		var request = new XMLHttpRequest();
 		request.open('GET', requestURL);
-		request.responseType = 'text';	
+		request.responseType = 'json';		
 		request.send();
 		request.onload = function() {
 			var data = request.response;
-			console.log(data);
+			//console.log("ICI la data ");
+			//console.log(data);
 			//faire une liste des sommets du graphes.
 			var listeSommet=[];
 			var listeSommetId=[];
@@ -24,6 +25,10 @@ function adjacence(fichier){
 			for(var i in data['links']){
 				var listeTemp=[listeSommet.indexOf(data['links'][i]['source']), listeSommet.indexOf(data['links'][i]['target']),data['links'][i]['value']];
 				liste.push(listeTemp);
+				//console.log("DONNE");
+				//console.log(data['links'][i]['source']);
+				//console.log(data['links'][i]['target']);
+				//console.log(data['links'][i]['value']);
 			}
 			
 			var listeNeutre=[];
@@ -51,7 +56,9 @@ function adjacence(fichier){
 						var test1= liste[j][2];
 						var donnee=Math.round(test1*1000)/1000;
 						listeNeutre[i][2]=donnee;
-						//console.log(liste[j]);
+						//console.log("DONNEE");
+						//console.log(liste[j][2]);
+						//console.log(donnee);
 						//console.log(valeurNeutre);
 					}
 					j=j+1;
@@ -59,7 +66,8 @@ function adjacence(fichier){
 				
 				i=i+1;
 			}
-			//console.log(liste);
+			//console.log("LISTE NEUTRE");
+			//console.log(listeNeutre);
 
 
 		
@@ -72,7 +80,7 @@ function getPointCategoryName(point, dimension) {
     return axis.categories[point[isY ? 'y' : 'x']];
 }
 
-Highcharts.chart('container2', {
+Highcharts.chart('container2_entite', {
 
     chart: {
         type: 'heatmap',
@@ -83,7 +91,7 @@ Highcharts.chart('container2', {
 
 
     title: {
-        text: 'Matrice d\'adjacence'
+        text: ''
     },
 
     xAxis: {
@@ -112,8 +120,8 @@ Highcharts.chart('container2', {
 
     colorAxis: {
         min: 0,
-        minColor: '#FFFFFF',
-        maxColor: Highcharts.getOptions().colors[0]
+        minColor: '#e9e9e9',
+        maxColor: Highcharts.getOptions().colors[1]
     },
 
     legend: {
@@ -161,8 +169,6 @@ Highcharts.chart('container2', {
     }
 
 });
-
-
 
 
 		}
