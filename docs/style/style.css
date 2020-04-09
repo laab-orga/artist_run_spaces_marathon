@@ -41,7 +41,7 @@ text {
 /* Contenu page */
 .content{
   display:grid;
-  padding-top:100px;
+  padding-top:3%;
   grid-template-columns: 2fr 1fr;
 }
 .left{
@@ -67,7 +67,7 @@ svg{
 /* ------------------------------------------------------------------------------------ */
 /*Navbar*/
 .navbar{
-  position:fixed;
+  /*position:fixed;*/
 }
 .nav_header{
   position:fixed;
@@ -109,7 +109,7 @@ svg{
   margin-top    : 10;
 } 
 /* ------------------------------------------------------------------------------------ */
-
+/*
 .titreGraphe{
 	padding-top:160px;
 	color:rgba(98, 98, 98, 1);
@@ -117,7 +117,26 @@ svg{
 	letter-spacing:3px;
 	text-align:center;
 	font-size:20px;
+	padding-bottom:2%;
 }
+*/
+.titreGraphe {
+    margin-top: 3%;
+    color: rgba(98, 98, 98, 1);
+    font-family: Didot,serif;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 2%;
+    border-bottom: 1px solid black;
+    padding-top: 1%;
+    width: 90%;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .titreCluster{
 	color:rgba(98, 98, 98, 1);
 	font-family: Didot,serif;
@@ -227,10 +246,15 @@ svg{
 	height:750px;
 }
 
+/*_____________________________________ LDA page index.html _______________________________*/
 
-
-
-
+#etudeLDA{
+	height:1250px; 
+	margin-top:0%;
+}
+#legendeGraphiqueTheo{
+	height:19%; 
+}
 
 
 
