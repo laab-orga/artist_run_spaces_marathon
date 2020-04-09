@@ -82,7 +82,7 @@ Highcharts.chart('container2', {
 
 
     title: {
-        text: 'Matrice d\'adjacence'
+        text: ''
     },
 
     xAxis: {
@@ -111,8 +111,8 @@ Highcharts.chart('container2', {
 
     colorAxis: {
         min: 0,
-        minColor: '#FFFFFF',
-        maxColor: Highcharts.getOptions().colors[0]
+        minColor: '#e9e9e9',
+        maxColor: Highcharts.getOptions().colors[1]
     },
 
     legend: {
