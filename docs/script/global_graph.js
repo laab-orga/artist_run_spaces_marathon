@@ -18,7 +18,7 @@ var requestURL = 'data/kmeans/radial_index.json';
 Highcharts.chart('container3', {
 
     title: {
-        text: 'Représentation des liaisons entre les differents clusters de ce graphe graphes.'
+        text: 'Représentation des liaisons entre les differents clusters de ce graphe.'
     },
 
     accessibility: {
