@@ -261,7 +261,20 @@ svg{
 	margin-top:-20%;
 	margin-left:7%; 
 }
-
+/*_______________________________________ page nameEntites.html _______________________________*/
+#param_scrap_pro{
+	float:left;
+	width:50%;
+	height:700px;
+}
+#param_scrap_words{
+	float:left;
+	width:50%;
+	height:700px;
+}
+.etudeParamSarah{
+	height:750px;
+}
 
 
 
