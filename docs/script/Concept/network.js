@@ -5,7 +5,7 @@ var color = d3.scaleOrdinal(d3.schemeGreys[9]);
 
 function draw_graph(fichier,div){
   $('#viz_'+div).html('');
-  d3.json("data/scrap_web_link/GRAPHE/"+fichier+".json").then(function(graph) {
+  d3.json("data/scrap_web_link/Concept/"+fichier+".json").then(function(graph) {
     console.log(graph);
   var label = {
       'nodes': [],
